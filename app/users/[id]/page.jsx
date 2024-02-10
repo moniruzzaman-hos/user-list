@@ -59,7 +59,9 @@ function Details({ params }) {
     callData();
   };
   useEffect(() => {
-    init();
+    if (typeof window !== "undefined") {
+      init();
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
