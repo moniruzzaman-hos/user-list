@@ -61,11 +61,11 @@ function CommonHeader({
 
   return (
     <div className="border-t border-teal-800 bg-gray-200">
-      <div className="flex justify-between items-center p-4">
-        <div className="text-2xl font-semibold">User List</div>
-        <div className="flex flex-row gap-4 items-center">
+      <div className="flex flex-col md:flex-row justify-between items-center p-4">
+        <div className="text-2xl font-semibold mb-2 md:mb-0">User List</div>
+        <div className="flex flex-col md:flex-row gap-4 items-center">
           {/* create select dropdown */}
-          <div>
+          <div className="w-full">
             <select
               className="w-full rounded-lg border border-gray-300 p-2 focus:outline-none focus:border-teal-500"
               onChange={(e) => {
@@ -93,9 +93,9 @@ function CommonHeader({
               value={value}
             />
           </div>
-          <div className="">
+          <div className="w-full">
             <button
-              className="bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-lg transition"
+              className="bg-teal-500 w-full hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-lg transition"
               onClick={() => handleModalOpen("modelConfirm")}
             >
               Add User
